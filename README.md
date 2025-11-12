@@ -102,9 +102,9 @@ The model parameters are restricted to the following valid ranges (all angles in
 
 | Parameter | Symbol | Range | Description |
 |------------|:-------:|:-------------------:|-----------------------------|
-| Angle (Theta) | $ \theta $ | $ 0^\circ < \theta < 50^\circ $ | Orientation (tilt) of the base ray in the XY plane |
-| Modulation Factor | $ M $ | $ -0.05 < M < 0.05 $ | Controls exponential growth/decay of the oscillation amplitude |
-| Horizontal Offset | $ X $ | $ 0 < X < 100 $ | Horizontal translation of the entire curve (origin at $(X, 42)$) |
+| Angle (Theta) |  \theta |  0^\circ < \theta < 50^\circ  | Orientation (tilt) of the base ray in the XY plane |
+| Modulation Factor |  M  |  -0.05 < M < 0.05  | Controls exponential growth/decay of the oscillation amplitude |
+| Horizontal Offset |  X  |  0 < X < 100  | Horizontal translation of the entire curve (origin at $(X, 42)$) |
 
 These bounds keep the model stable and ensure the oscillations remain subtle rather than diverging.
 
