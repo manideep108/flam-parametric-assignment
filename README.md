@@ -153,7 +153,7 @@ In essence, this model describes a *controlled oscillating line* that follows a 
 
 ### 1️⃣ Overview of the Dataset
 The dataset `xy_data.csv` contains **1,000 coordinate points** \((x_i, y_i)\) that represent samples of a smooth parametric curve generated from the model:
-
+$$
 x = t \cdot \cos(\theta) - e^{M|t|} \cdot \sin(0.3t) \cdot \sin(\theta) + X
 $$
 
