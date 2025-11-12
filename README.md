@@ -1,62 +1,116 @@
-# flam-parametric-assignment
-Research &amp; Development assignment – Determination of unknown parameters (θ, M, X) in a parametric model using L1 optimization.
-## 🧮 Theoretical Analysis of the Parametric Model
+# ⚙️ Flam Parametric Assignment
 
-### 1. Simplification of the Given Model
-The given curve is defined by the following parametric equations:
-
-x = t * cos(theta) - exp(M * |t|) * sin(0.3 * t) * sin(theta) + X  
-y = 42 + t * sin(theta) + exp(M * |t|) * sin(0.3 * t) * cos(theta)
-
-Since t lies in the range 6 < t < 60, all values of t are positive.  
-Hence, |t| = t, and the model simplifies to:
-
-x(t) = t * cos(theta) - exp(M * t) * sin(0.3 * t) * sin(theta) + X  
-y(t) = 42 + t * sin(theta) + exp(M * t) * sin(0.3 * t) * cos(theta)
+**Research & Development Assignment**  
+Determination of unknown parameters **(θ, M, X)** in a complex **parametric model** using **L1 optimization**.
 
 ---
 
-### 2. Role of the Unknown Parameters
+## 🧮 Theoretical Analysis of the Parametric Model
+
+### 1️⃣ Simplification of the Given Model
+
+The given curve is defined by the following parametric equations:
+
+$$
+x = t \cdot \cos(\theta) - e^{M|t|} \cdot \sin(0.3t) \cdot \sin(\theta) + X
+$$
+
+$$
+y = 42 + t \cdot \sin(\theta) + e^{M|t|} \cdot \sin(0.3t) \cdot \cos(\theta)
+$$
+
+Since \( 6 < t < 60 \), the value of \( |t| = t \).  
+Hence, the model simplifies to:
+
+$$
+x(t) = t\cos(\theta) - e^{Mt}\sin(0.3t)\sin(\theta) + X
+$$
+
+$$
+y(t) = 42 + t\sin(\theta) + e^{Mt}\sin(0.3t)\cos(\theta)
+$$
+
+---
+
+### 2️⃣ Role of the Unknown Parameters
+
 | Parameter | Symbol | Function | Description |
 |------------|:-------:|:----------|:-------------|
 | **Theta (θ)** | θ | Rotation | Defines the overall orientation (tilt) of the curve in the XY plane. |
-| **Modulation (M)** | M | Growth/Decay | Controls how the amplitude of the oscillation grows (M > 0) or decays (M < 0) as t increases. |
-| **Offset (X)** | X | Translation | Horizontally shifts the entire curve left or right. |
+| **Modulation (M)** | M | Growth / Decay | Controls how the oscillation amplitude grows (M > 0) or decays (M < 0) as *t* increases. |
+| **Offset (X)** | X | Translation | Horizontally shifts the entire curve without changing its shape. |
 
 ---
 
-### 3. Geometric Interpretation
-The model can be separated into two distinct parts:
+### 3️⃣ Geometric Interpretation
 
-**A. Base Ray (Linear Component):**
-x_base = t * cos(theta) + X  
-y_base = 42 + t * sin(theta)
+The model can be separated into two components:
 
-This represents a straight line (or “ray”) starting from point (X, 42) and extending outward at an angle theta.
+#### 🔹 A. Base Ray (Linear Component)
+$$
+x_{base} = t\cos(\theta) + X
+$$
 
-**B. Oscillatory Component (Perpendicular Wobble):**
-x_pert = -exp(M * t) * sin(0.3 * t) * sin(theta)  
-y_pert = exp(M * t) * sin(0.3 * t) * cos(theta)
+$$
+y_{base} = 42 + t\sin(\theta)
+$$
+This represents a straight line (a *ray*) starting from the point \( (X, 42) \) and extending outward at an angle θ.
 
-This term adds a sinusoidal “wobble” perpendicular to the base line.  
-Together, the curve can be visualized as a **wavy line tilted at angle theta**, with its amplitude slightly increasing or decreasing depending on the sign of M.
+#### 🔹 B. Oscillatory Component (Perpendicular Wobble)
+$$
+x_{pert} = -e^{Mt}\sin(0.3t)\sin(\theta)
+$$
+$$
+y_{pert} = e^{Mt}\sin(0.3t)\cos(\theta)
+$$
+This adds a sinusoidal “wobble” perpendicular to the base ray.  
+The overall shape can be visualized as a **wavy line tilted at angle θ**, where the amplitude of the oscillation slightly increases or decreases depending on the sign of M.
 
 ---
 
-### 4. Parameter Constraints
-0° < θ < 50°  
--0.05 < M < 0.05  
-0 < X < 100  
+### 4️⃣ Parameter Constraints
 
-These narrow bounds ensure that the model remains stable and the oscillations stay subtle rather than diverging.
+$$
+0° < \theta < 50° \\
+-0.05 < M < 0.05 \\
+0 < X < 100
+$$
+
+These bounds ensure that the oscillation remains subtle and the model stable.
 
 ---
 
-### 5. Conceptual Summary
-- The **base ray** defines the direction and linear growth of the curve.  
-- The **oscillatory term** introduces periodic side-to-side variations.  
-- The **angle (θ)** sets orientation, **M** defines smooth exponential scaling of the oscillations, and **X** shifts the entire structure horizontally.  
+### 5️⃣ Conceptual Summary
 
-Together, they create a controlled oscillating curve that aligns closely with the given dataset.
+- The **base ray** defines the main direction and linear growth of the curve.  
+- The **oscillatory term** introduces a side-to-side periodic variation.  
+- The **angle (θ)** rotates the structure, **M** controls the amplitude’s exponential scaling, and **X** horizontally shifts the entire curve.  
+
+In essence, this model describes a *controlled oscillating line* that follows a linear path while performing a smooth perpendicular wave motion.
+
+---
+
+### 🧩 Visual Overview
+
+| Concept | Description |
+|----------|--------------|
+| **Type of model** | Parametric 2D curve |
+| **Nature** | Oscillatory + Exponential scaling |
+| **Domain of t** | \(6 < t < 60\) |
+| **Optimization target** | Minimize L1 (mean absolute) distance between observed and predicted points |
+
+---
+
+### ✅ Summary of This Section
+
+- Equations simplified for computational use.  
+- Role and influence of each parameter clearly identified.  
+- Mathematical interpretation linked to geometric intuition.  
+- Parameter constraints finalized for optimization search space.
+
+---
+
+📘 *Next section:* Exploratory Data Analysis (EDA)
+
 
 
