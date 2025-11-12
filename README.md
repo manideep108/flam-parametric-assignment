@@ -248,7 +248,7 @@ The Exploratory Data Analysis (EDA) establishes that:
 
 **Desmos visualization**  
 Interactive Desmos plot of the final parametric curve:  
-👉 [View on Desmos](YOUR_DESMOS_LINK)
+👉 [View on Desmos][https://www.desmos.com/calculator]
 
 **Short method summary**  
 We used a Chamfer-style L1 cost with KDTree for nearest neighbor search and a two-stage optimization:  
