@@ -98,15 +98,25 @@ Hence, the entire structure can be viewed as a **wavy line tilted at angle θ**,
 
 ### 4️⃣ Parameter Constraints
 
-$$
-0° < \theta < 50° \\
--0.05 < M < 0.05 \\
-0 < X < 100
-$$
+The model parameters are defined within the following valid ranges:
 
-These bounds ensure that the oscillation remains subtle and the model stable.
+<div align="center">
+
+| Parameter | Symbol | Range | Description |
+|------------|:-------:|:------|:-------------|
+| **Angle (Theta)** | \( \theta \) | \( 0^\circ < \theta < 50^\circ \) | Rotation angle of the main curve |
+| **Modulation Factor (M)** | \( M \) | \( -0.05 < M < 0.05 \) | Controls growth or decay of oscillation amplitude |
+| **Horizontal Offset (X)** | \( X \) | \( 0 < X < 100 \) | Shifts the entire curve horizontally |
+
+</div>
+
+These bounds ensure that:
+- The oscillation remains **subtle** and **bounded**.  
+- The model maintains **numerical stability** during optimization.  
+- The resulting shape visually aligns with realistic geometric behavior.
 
 ---
+
 
 ### 5️⃣ Conceptual Summary
 
