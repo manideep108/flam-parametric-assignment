@@ -1,0 +1,6 @@
+Theta (deg): 30.000445
+Theta (rad): 0.523608
+M: 0.030000
+X: 55.000783
+Final mean L1 (exact, n_pred=1500): 0.01342545
+Final mean L1 (KDTree approx): 0.016737
