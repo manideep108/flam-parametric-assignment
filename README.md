@@ -155,10 +155,10 @@ In essence, this model describes a *controlled oscillating line* that follows a 
 The dataset `xy_data.csv` contains **1,000 coordinate points** \((x_i, y_i)\) that represent samples of a smooth parametric curve generated from the model:
 
 \[
-x(t) = t\cos(\theta) - e^{Mt}\sin(0.3t)\sin(\theta) + X
+x(t) = t\cos( θ) - e^{Mt}\sin(0.3t)\sin( θ) + X
 \]
 \[
-y(t) = 42 + t\sin(\theta) + e^{Mt}\sin(0.3t)\cos(\theta)
+y(t) = 42 + t\sin( θ) + e^{Mt}\sin(0.3t)\cos( θ)
 \]
 
 Each pair \((x_i, y_i)\) lies somewhere along this curve, but **the parameter \(t_i\)** for each point is **unknown** — this makes it a *curve-fitting without correspondence* problem.
@@ -193,7 +193,7 @@ This unordered nature makes a standard regression \(x(t), y(t)\) impossible — 
 
 ### 4️⃣ Insights for Parameter Estimation
 - **θ (Theta):**  
-  The average slope of the data cloud (\(\Delta y / \Delta x \approx 0.47\)) corresponds to a θ of roughly **25°**, which provides a strong initial guess.
+  The average slope of the data cloud (\(Delta y / Delta x \approx 0.47\)) corresponds to a θ of roughly **25°**, which provides a strong initial guess.
 
 - **X (Offset):**  
   The horizontal midpoint of the cloud (≈82.5 mean) and base level at y=42 suggest **X ≈ 49**.
