@@ -44,27 +44,55 @@ $$
 
 ### 3️⃣ Geometric Interpretation
 
-The model can be separated into two components:
+The model can be separated into two fundamental components:
 
-#### 🔹 A. Base Ray (Linear Component)
+---
+
+#### 🔹 **A. Base Ray (Linear Component)**
+
+This represents the *core direction* of the curve — a straight ray extending at an angle θ.
+
+<div align="center">
+
 $$
-x_{base} = t\cos(\theta) + X
+x_{base} = t \cdot \cos(\theta) + X
 $$
 
 $$
-y_{base} = 42 + t\sin(\theta)
+y_{base} = 42 + t \cdot \sin(\theta)
 $$
-This represents a straight line (a *ray*) starting from the point \( (X, 42) \) and extending outward at an angle θ.
 
-#### 🔹 B. Oscillatory Component (Perpendicular Wobble)
+</div>
+
+Geometrically, this is a straight line starting from the point **(X, 42)** and extending outward at an angle **θ** from the x-axis.
+
+---
+
+#### 🔹 **B. Oscillatory Component (Perpendicular Wobble)**
+
+This component introduces a sinusoidal side-to-side “wobble” that is **perpendicular** to the base ray.
+
+<div align="center">
+
 $$
-x_{pert} = -e^{Mt}\sin(0.3t)\sin(\theta)
+x_{pert} = -e^{Mt} \cdot \sin(0.3t) \cdot \sin(\theta)
 $$
+
 $$
-y_{pert} = e^{Mt}\sin(0.3t)\cos(\theta)
+y_{pert} = e^{Mt} \cdot \sin(0.3t) \cdot \cos(\theta)
 $$
-This adds a sinusoidal “wobble” perpendicular to the base ray.  
-The overall shape can be visualized as a **wavy line tilted at angle θ**, where the amplitude of the oscillation slightly increases or decreases depending on the sign of M.
+
+</div>
+
+This perturbation term causes the path to oscillate orthogonally around the base line.  
+The exponential term \( e^{Mt} \) modulates the amplitude of this oscillation:
+
+- If **M > 0** → oscillations gradually **increase** in amplitude (growth).  
+- If **M < 0** → oscillations **decay** smoothly (damping).  
+- If **M ≈ 0** → oscillations remain nearly constant.
+
+Hence, the entire structure can be viewed as a **wavy line tilted at angle θ**, with a controlled amplitude scaling over time.
+
 
 ---
 
