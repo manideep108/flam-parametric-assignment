@@ -96,17 +96,17 @@ Hence, the entire structure can be viewed as a **wavy line tilted at angle θ**,
 
 ---
 
-### 4️⃣ Parameter Constraints
+### 4. Parameter Constraints
 
-The model parameters are defined within the following valid ranges:
-
-<div align="center">
+The model parameters are restricted to the following valid ranges (all angles in degrees unless stated otherwise):
 
 | Parameter | Symbol | Range | Description |
-|------------|:-------:|:------|:-------------|
-| **Angle (Theta)** | \( \theta \) | \( 0^\circ < \theta < 50^\circ \) | Rotation angle of the main curve |
-| **Modulation Factor (M)** | \( M \) | \( -0.05 < M < 0.05 \) | Controls growth or decay of oscillation amplitude |
-| **Horizontal Offset (X)** | \( X \) | \( 0 < X < 100 \) | Shifts the entire curve horizontally |
+|---|:---:|---:|---|
+| Angle (Theta) | `$ \theta $` | `0^\circ < \theta < 50^\circ` | Orientation (tilt) of the base ray in the XY plane |
+| Modulation factor | `$ M $` | `-0.05 < M < 0.05` | Controls exponential growth/decay of the oscillation amplitude |
+| Horizontal offset | `$ X $` | `0 < X < 100` | Horizontal translation of the entire curve (origin at `(X, 42)`) |
+
+These bounds keep the model stable and ensure the oscillations remain subtle rather than diverging.
 
 </div>
 
