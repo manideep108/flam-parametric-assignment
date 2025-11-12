@@ -110,7 +110,6 @@ In essence, this model describes a *controlled oscillating line* that follows a 
 
 ---
 
-📘 *Next section:* Exploratory Data Analysis (EDA)
 
 
 
