@@ -153,13 +153,15 @@ In essence, this model describes a *controlled oscillating line* that follows a 
 
 ### 1️⃣ Overview of the Dataset
 The dataset `xy_data.csv` contains **1,000 coordinate points** \((x_i, y_i)\) that represent samples of a smooth parametric curve generated from the model:
+
 $$
-x = t \cdot \cos(\theta) - e^{M|t|} \cdot \sin(0.3t) \cdot \sin(\theta) + X
+x(t) = t\cos(\theta) - e^{Mt}\sin(0.3t)\sin(\theta) + X
 $$
 
 $$
-y = 42 + t \cdot \sin(\theta) + e^{M|t|} \cdot \sin(0.3t) \cdot \cos(\theta)
+y(t) = 42 + t\sin(\theta) + e^{Mt}\sin(0.3t)\cos(\theta)
 $$
+
 
 
 Each pair \((x_i, y_i)\) lies somewhere along this curve, but **the parameter \(t_i\)** for each point is **unknown** — this makes it a *curve-fitting without correspondence* problem.
