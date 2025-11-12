@@ -108,7 +108,7 @@ In essence, this model describes a *controlled oscillating line* that follows a 
 - Mathematical interpretation linked to geometric intuition.  
 - Parameter constraints finalized for optimization search space.
 
----
+
 
 
 
